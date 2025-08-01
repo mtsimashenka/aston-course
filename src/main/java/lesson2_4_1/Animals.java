@@ -1,4 +1,4 @@
-package lesson2_4;
+package lesson2_4_1;
 
 abstract class Animals {
     protected String name;

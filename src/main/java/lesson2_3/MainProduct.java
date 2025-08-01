@@ -1,3 +1,5 @@
+package lesson2_3;
+
 public class MainProduct {
     public static void main(String[] args) {
         Product[] productsArray = new Product[5];
