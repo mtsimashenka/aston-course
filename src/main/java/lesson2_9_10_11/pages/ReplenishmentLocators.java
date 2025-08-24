@@ -1,4 +1,4 @@
-package lesson2_9_10.pages;
+package lesson2_9_10_11.pages;
 
 public class ReplenishmentLocators {
 

@@ -1,6 +1,6 @@
-package lesson2_9_10;
+package lesson2_9_10_11;
 
-import lesson2_9_10.driver.Driver;
+import lesson2_9_10_11.driver.Driver;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;

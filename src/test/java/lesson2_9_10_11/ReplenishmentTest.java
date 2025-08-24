@@ -1,6 +1,6 @@
-package lesson2_9_10;
+package lesson2_9_10_11;
 
-import lesson2_9_10.pages.ReplenishmentPage;
+import lesson2_9_10_11.pages.ReplenishmentPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,6 @@
-package lesson2_9_10.pages;
+package lesson2_9_10_11.pages;
 
-import lesson2_9_10.driver.Driver;
+import lesson2_9_10_11.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static lesson2_9_10.driver.Driver.getDriver;
+import static lesson2_9_10_11.driver.Driver.getDriver;
 
 public class ReplenishmentPage {
     public static final String PHONE_NUMBER = "297777777";
