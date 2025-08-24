@@ -1,6 +1,6 @@
-package lesson2_9;
+package lesson2_9_10;
 
-import lesson2_9.pages.ReplenishmentPage;
+import lesson2_9_10.pages.ReplenishmentPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,9 +25,15 @@ public class ReplenishmentTest extends BaseTest {
     public final String LABEL_DEBT_TEXT = "Номер счета на 2073";
     public final String INPUT_SUM_TEXT = "Сумма";
     public final String INPUT_SUM_VALUE = "100.00 BYN";
-    public final String MODAL_BUTTON_TEXT = " Оплатить  100.00 BYN ";
-    public final String MODAL_PHONE_NUMBER_TEXT = "Оплата: Услуги связи\n" +
-            "Номер:375297777777";
+    public final String MODAL_BUTTON_TEXT = "Оплатить 100.00 BYN";
+    public final String MODAL_PHONE_NUMBER_TEXT = "Оплата: Услуги связи Номер:375297777777";
+    public final String MODAL_LABEL_NUMBER_CARD_TEXT = "Номер карты";
+    public final String MODAL_LABEL_VALIDITY_PERIOD_TEXT = "Срок действия";
+    public final String MODAL_LABEL_NAME_SURNAME_TEXT = "Имя и фамилия на карте";
+    public final String MODAL_LABEL_CVC_TEXT = "CVC";
+    public final String MODAL_IMG_VISA_INPUT = "1";
+    public final String MODAL_IMG_MASTERCARD_INPUT = "2";
+    public final String MODAL_IMG_BELCARD_INPUT = "3";
 
     @BeforeEach
     public void setUp() {
@@ -90,8 +96,16 @@ public class ReplenishmentTest extends BaseTest {
         replenishmentPage.inputPhoneNumber();
         replenishmentPage.inputFieldSum(INPUT_SUM_TEXT);
         replenishmentPage.clickSubmitButton();
-        Assertions.assertEquals(INPUT_SUM_VALUE, replenishmentPage.getSumText());
+        Assertions.assertEquals(INPUT_SUM_VALUE, replenishmentPage.getSumModalText());
         Assertions.assertEquals(MODAL_BUTTON_TEXT, replenishmentPage.getModalButtonText());
         Assertions.assertEquals(MODAL_PHONE_NUMBER_TEXT, replenishmentPage.getModalPhoneNumberText());
+        Assertions.assertEquals(MODAL_LABEL_NUMBER_CARD_TEXT, replenishmentPage.getModalLabelNumberCardText());
+        Assertions.assertEquals(MODAL_LABEL_VALIDITY_PERIOD_TEXT, replenishmentPage.getModalLabelValidityPeriod());
+        Assertions.assertEquals(MODAL_LABEL_NAME_SURNAME_TEXT, replenishmentPage.getModalLabelNameSurname());
+        Assertions.assertEquals(MODAL_LABEL_CVC_TEXT, replenishmentPage.getModalLabelCVC());
+        replenishmentPage.checkModalLogoImg(MODAL_IMG_VISA_INPUT);
+        replenishmentPage.checkModalLogoImg(MODAL_IMG_MASTERCARD_INPUT);
+        replenishmentPage.checkModalLogoImg(MODAL_IMG_BELCARD_INPUT);
+        replenishmentPage.checkModalLogoWorld();
     }
 }
